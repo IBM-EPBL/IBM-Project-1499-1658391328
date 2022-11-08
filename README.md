@@ -5,6 +5,6 @@ A Novel Method for Handwritten Digit Recognition System
   Team Leader:
    P.HARIKRISHNA
   Team Members:
-   1.A.SARONJOHNSON
+   1.S.VISHNUPRIYA
    2.V.AJAY
-   3.S.VISHNUPRIYA
+   3.A.SARONJOHNSON
