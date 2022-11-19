@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<head>
+    
+    <link rel="stylesheet" href="../static/homePage.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+
+        var color=['#FFEC00', '#FF7300','#FF0000','#52D726','#007ED6','#7CDDDD', '#7CDDDD', '#F54F52','#F54F52']
+        
+        var barChart = {
+          type: 'bar',
+          data: {
+            labels: color,
+            datasets: [
+              {
+                label: "Numbers",
+                backgroundColor: color,
+                data: '{{result}}'
+              }
+            ]
+          },
+          options: {
+            responsive:true
+          }
+        };
+        
+        window.onload = function() {
+            var bar = document.getElementById('myChart').getContext('2d');
+            window.myPie = new Chart(bar, barChart);
+        };
+        
+    </script>
+</head>
+
+<body class="body"  >
+    <div class="contentWrapper">
+        <center><h1>The Predicted number is</h1></center>
+        {% if result %}
+            <p><h3>output predicted : {{result}}</h3></p>
+            
+        {% else %}
+            <p>No output Predicted Please enter a proper Image</p>
+        {% endif %}
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    
+</body>

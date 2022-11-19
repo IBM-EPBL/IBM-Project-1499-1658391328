@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <center><h1>Hand Writing Detection</h1></center>
+    <link rel="stylesheet" href="../static/recognisePg.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <h1> Upload Test Image</h1>
+        <form action="/predict" method="POST" enctype = "multipart/form-data">
+            <label for="photo"></label>
+            <div class="fileUploadWrapper">
+                <input class="fileUpload" type="file" name="image"/>
+                <input type="submit" value="Predict"/>
+            </div>   
+        </form>
+    </div>
+    
+</body>
